@@ -25,8 +25,15 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
-    this.info = () => `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "already read" : "not read yet"}.`;
 }
+
+Book.prototype.info = function() { 
+    return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read ? "already read" : "not read yet"}.`
+};
 
 const book1 = new Book("Lord of the Rings", "J.R.R Tolkien", 295, false);
 console.log(book1.info())
+
+console.log(Object.getPrototypeOf(player2) === Player2.prototype);
+
+console.log(Object.getPrototypeOf(player) === Player2.prototype); 
